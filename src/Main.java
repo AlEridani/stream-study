@@ -120,9 +120,14 @@ public class Main {
 
     //문제 9: 문자열 리스트에서 모음 개수 세기
     //문자열 리스트가 주어졌을 때, 각 문자열에 포함된 모음('a', 'e', 'i', 'o', 'u')의 개수를 세고 이를 리스트로 반환하세요.
-//    List<String> words = Arrays.asList("apple", "banana", "cat", "dog", "elephant");
-//    List<Integer> result14 = words.stream()
-//            .filter()
+    List<String> words = Arrays.asList("apple", "banana", "cat", "dog", "elephant");
+    List<Integer> result14 = words.stream()
+            .map(word ->(int) word.chars()
+                    .filter(c ->"aeiouAEIOU".indexOf(c) != -1)
+                    .count())
+            .toList();
+
+
 
     //문제 10: 특정 범위의 숫자 필터링
     //정수 배열이 주어졌을 때, 배열에서 10보다 크고 20보다 작은 숫자만 필터링하여 리스트로 반환하세요.
